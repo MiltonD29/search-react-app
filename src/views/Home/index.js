@@ -11,7 +11,7 @@ export default function Home() {
     const [message, setMessage] = useState("");
     const [results, setResults] = useState([]);
 
-    const handleCloseSearch = () => {
+    const handleClearSearch = () => {
         setIsSearching(false);
         setResults([]);
     };
@@ -54,7 +54,7 @@ export default function Home() {
                             isFetching={isFetching}
                             isSearching={isSearching}
                             onSearch={handleSearchClick}
-                            onClose={handleCloseSearch}
+                            onClear={handleClearSearch}
                         />
                         <SearchResults
                             results={results}

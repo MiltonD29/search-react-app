@@ -2,12 +2,12 @@ import { useState } from "react";
 
 import "./style.css";
 
-export default function SearchForm({ onSearch, onClose, isSearching, isFetching }) {
+export default function SearchForm({ onSearch, onClear, isSearching, isFetching }) {
     const [searchText, setSearchText] = useState("");
 
-    const handleCloseClick = () => {
+    const handleClearClick = () => {
         setSearchText("");
-        onClose();
+        onClear();
     };
 
     return (
@@ -29,7 +29,7 @@ export default function SearchForm({ onSearch, onClose, isSearching, isFetching 
                     <button
                         className="button is-white"
                         disabled={!isSearching || !searchText.length}
-                        onClick={handleCloseClick}
+                        onClick={handleClearClick}
                     >
                         Limpiar
                     </button>
