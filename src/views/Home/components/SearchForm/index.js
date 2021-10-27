@@ -28,7 +28,7 @@ export default function SearchForm({ onSearch, onClear, isSearching, isFetching 
                 <div className="column is-6 is-offset-6 has-text-right">
                     <button
                         className="button is-white"
-                        disabled={!isSearching || !searchText.length}
+                        disabled={!isSearching || isFetching || !searchText.length}
                         onClick={handleClearClick}
                     >
                         Limpiar
